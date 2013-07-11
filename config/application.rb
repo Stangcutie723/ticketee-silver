@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-module TextMate2
+module Ticketee
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -21,3 +21,5 @@ module TextMate2
     # config.i18n.default_locale = :de
   end
 end
+
+Bundler.require(*Rails.groups(:assets => %w(development test)))

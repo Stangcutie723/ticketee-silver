@@ -32,6 +32,14 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :test, :development do
+  gem 'rspec-rails', '~> 2.11'
+end
+
+group :test do
+  gem 'capybara', '1.1.2'
+end
+
 group :test do
   gem 'capybara', '1.1.2'
   gem 'factory_girl', '2.6.4'

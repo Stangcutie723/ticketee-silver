@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TextMate2</title>
+  <title>Ticketee</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -11,4 +11,24 @@
 <%= yield %>
 
 </body>
+</html>
+
+<html>
+<head>
+  <title>Ticketee</title>
+  <%= stylesheet_link_tag
+    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+    <% flash.each do |key, value| %>
+  <div class='flash' id='<%= key %>'>
+    <%= value %>
+  </div>
+<% end %>
+  <%= yield %>
+</body>
+
 </html>

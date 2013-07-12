@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-TextMate2::Application.load_tasks
+Ticketee::Application.load_tasks

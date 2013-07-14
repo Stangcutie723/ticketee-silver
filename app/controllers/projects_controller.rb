@@ -39,6 +39,8 @@ def update
   end
 end
 
+
+
 def destroy
   @project = Project.find(params[:id])
   @project.destroy

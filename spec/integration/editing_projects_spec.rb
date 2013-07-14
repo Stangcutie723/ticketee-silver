@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-  feature "Editing Projects" do
-    before do
-      Factory(:project, :name => "TextMate 2")
-      visit "/"
-      click_link "TextMate 2"
-      click_link "Edit Project"
-    end
+feature "Editing Projects" do
+  before do
+    Factory(:project, :name => "TextMate 2")
+    visit "/"
+    click_link "TextMate 2"
+    click_link "Edit Project"
+end
 
   scenario "Updating a project" do
     fill_in "Name", :with => "TextMate 2 beta"
@@ -21,4 +21,5 @@ require 'spec_helper'
   end
 
 end
+
 

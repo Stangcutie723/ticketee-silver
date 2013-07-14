@@ -1,5 +1,13 @@
 Ticketee::Application.routes.draw do
+  root :to => "project#index"
+end
 
+Ticketee::Application.routes.draw do
+  resources :projects do
+  resources :tickets
+end
+
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -40,7 +48,7 @@ Ticketee::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

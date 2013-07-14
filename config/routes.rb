@@ -7,7 +7,6 @@ Ticketee::Application.routes.draw do
   resources :tickets
 end
 
-end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -62,4 +61,3 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end

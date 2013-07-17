@@ -1,8 +1,11 @@
 require 'spec_helper'
 
-feature "Editing tickets" do
-  let!(:project) { Factory(:project) }
-  let!(:ticket) { Factory(:ticket, :project => project) }
+  feature "Editing tickets" do
+    before do
+      sign_in_as!(user)
+    let!(:project) { Factory(:project) }
+    let!(:ticket) { Factory(:ticket, :project => project) }
+  end
 
   before do
     visit '/'

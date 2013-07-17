@@ -4,7 +4,6 @@ feature "Creating Tickets" do
   before do
     Factory(:project, :name => "Internet Explorer")
     user = Factory(:user, :email => "ticketee@example.com")
-    <co id="_432_4125_3922_1"/>
     user.confirm!
 
     visit '/'
@@ -26,8 +25,9 @@ feature "Creating Tickets" do
     click_button "Create Ticket"
     page.should have_content("Ticket has been created.")
     within("#ticket #author") do
-    page.should have_content("Created by ticketee@example.com")
+     page.should have_content("Created by ticketee@example.com")
   end
+end
 
 
   scenario "Creating a ticket without valid attributes fails" do
@@ -44,5 +44,3 @@ feature "Creating Tickets" do
     page.should have_content("Ticket has not been created.")
     page.should have_content("Description is too short")
   end
-
-end

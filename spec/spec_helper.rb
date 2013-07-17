@@ -1,5 +1,12 @@
 require 'simplecov'
 SimpleCov.start 'rails'
+SimpleCov.root('/app/root/directory/public')
+
+if ENV['RAILS_ENV'] == 'test'
+  require 'simplecov'
+  SimpleCov.start 'rails'
+  puts "required simplecov"
+end
 
 ENV['RAILS_ENV'] == 'test'
 require File.expand_path("../../config/environment",__ FILE__)
@@ -19,3 +26,4 @@ RSpec.configure do |config|
 
   config.fixture_path = "#{::Rails.root}/spec/fixures"
 end
+

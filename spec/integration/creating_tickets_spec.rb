@@ -13,7 +13,11 @@ feature "Creating Tickets" do
     fill_in "Description", :with => "My pages are ugly!"
     click_button "Create Ticket"
     page.should have_content("Ticket has been created.")
+    within("#ticket #author") do
+    page.should have_content("Created by ticketee@example.com")
   end
+
+
   scenario "Creating a ticket without valid attributes fails" do
     click_button "Create Ticket"
     page.should have_content("Ticket has not been created.")

@@ -54,6 +54,7 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.11'
   gem 'pry-rails'
   gem 'launchy'
+  gem 'simplecov', :require => false, :group => :test
 end
 
 group :test do

@@ -18,6 +18,7 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
   config.before do
+    config.include Devise::TestHelpers, :type => :controller
     ActionMailer::Base.deliveries.clear
   end
 

@@ -8,6 +8,7 @@ require 'spec_helper'
   end
 
   before do
+    define_permission!(user, "view", project)
     visit '/'
     click_link project.name
     click_link ticket.title

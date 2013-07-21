@@ -25,7 +25,8 @@ end
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-gem 'devise'
+gem "devise", "~> 3.0.0"
+gem 'cancan', '1.6.7'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

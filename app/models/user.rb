@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   #<co id="_432_4125_3722_1"/>
   # Setup accessible (or protected) attributes for your model
+  has_many :permissions
 
   def to_s
     "#{email} (#{admin? ? "Admin" : "User"})"
